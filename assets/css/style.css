@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+@font-face {
+  font-family: Hanken;
+  src: url("/assets/fonts/HankenGrotesk-VariableFont_wght.woff2")
+      format("woff2-variations"),
+    url("/assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("truetype"),
+    url("/assets/fonts/static/HankenGrotesk-Bold.ttf") format("truetype"),
+    url("/assets/fonts/static/HankenGrotesk-ExtraBold.ttf") format("truetype"),
+    url("/assets/fonts/static/HankenGrotesk-Medium.ttf") format("truetype");
+  font-optical-sizing: auto;
+  font-weight: 100 900;
+}
+
+:root {
+  /* primary */
+  --red: hsl(0, 100%, 67%);
+  --orage: hsl(39, 100%, 56%);
+  --green: hsl(166, 100%, 37%);
+  --cobalt: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  --B-purple1: hsl(252, 100%, 67%);
+  --B-purple2: hsl(241, 81%, 54%);
+  --C-violet: hsla(256, 72%, 46%, 1);
+  --C-dark-violet: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --lavader: hsl(241, 100%, 89%);
+  --dark-blue: hsl(224, 30%, 27%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: "Hanken", sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  max-width: 85rem;
+  margin: 0 auto;
+  padding: 7rem 3.2rem;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  max-width: 85rem;
+  background-color: var(--white);
+  border-radius: 4rem;
+  box-shadow: 15px 10px 25px hsla(240, 100%, 96%, 1);
+}
+
+.left {
+  font-family: inherit;
+  background-image: linear-gradient(
+    to bottom,
+    var(--B-purple1),
+    var(--B-purple2)
+  );
+  padding: 5rem 8rem;
+  border-radius: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.left h4 {
+  color: var(--lavader);
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.circle {
+  background-image: linear-gradient(
+    to top,
+    var(--C-dark-violet),
+    var(--C-violet)
+  );
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  padding: 7rem;
+}
+
+.circle h1 {
+  color: var(--white);
+  font-size: 8.5rem;
+}
+
+.of100 {
+  color: hsla(241, 100%, 89%, 0.5);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.great {
+  color: var(--white);
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.text {
+  color: var(--lavader);
+  font-size: 2rem;
+}
+
+.right {
+  background-color: var(--white);
+  border-radius: 4rem;
+
+  padding: 5rem;
+}
+
+.box:nth-child(1) {
+  display: flex;
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+.box:nth-child(2) {
+  display: flex;
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+.box:nth-child(3) {
+  display: flex;
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+.box:nth-child(4) {
+  display: flex;
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+.right h2 {
+  color: var(--dark-blue);
+  margin-bottom: 3rem;
+}
+
+.box {
+  justify-content: space-between;
+  padding: 2rem;
+  border-radius: 1.2rem;
+  margin: 2rem 0;
+  align-items: center;
+}
+
+.categoryIcon {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.box:nth-child(1) .tittleCategory {
+  color: var(--red);
+  font-weight: 500;
+}
+.box:nth-child(2) .tittleCategory {
+  color: var(--orage);
+  font-weight: 500;
+}
+.box:nth-child(3) .tittleCategory {
+  color: var(--green);
+  font-weight: 500;
+}
+.box:nth-child(4) .tittleCategory {
+  color: var(--cobalt);
+  font-weight: 500;
+}
+
+.box:nth-child(1) .score,
+.box:nth-child(2) .score,
+.box:nth-child(3) .score,
+.box:nth-child(4) .score {
+  color: var(--dark-blue);
+  font-weight: 700;
+}
+
+.box:nth-child(1) .hundred,
+.box:nth-child(2) .hundred,
+.box:nth-child(3) .hundred,
+.box:nth-child(4) .hundred {
+  color: hsla(224, 30%, 27%, 0.7);
+  font-weight: 600;
+}
+
+.button:link,
+.button:visited {
+  margin-top: 4.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--dark-blue);
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 700;
+  padding: 1.5rem;
+  border-radius: 4rem;
+}
+
+.button:hover,
+.button:active {
+  cursor: pointer;
+  background-image: linear-gradient(
+    to bottom,
+    var(--B-purple1),
+    var(--B-purple2)
+  );
+}

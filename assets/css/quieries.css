@@ -1,0 +1,56 @@
+@media (max-width: 50em) {
+  .container {
+    padding: 0;
+  }
+  .main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+
+  .left {
+    padding: 5rem 4rem;
+    height: 75%;
+    border-radius: 0;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+  }
+
+  .left h4 {
+    font-size: 2rem;
+  }
+
+  .circle {
+    width: 5rem;
+    height: 5rem;
+    padding: 5rem;
+  }
+
+  .circle h1 {
+    font-size: 6rem;
+  }
+
+  .of100 {
+    font-size: 1.5rem;
+  }
+  .great {
+    font-size: 2.5rem;
+  }
+
+  .text {
+    font-size: 1.5rem;
+  }
+
+  .right {
+    border-radius: 0;
+    padding: 1.5rem 2.5rem;
+  }
+  .right h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  .box {
+    padding: 1.5rem;
+  }
+}
