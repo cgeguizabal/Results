@@ -221,3 +221,7 @@ body {
     var(--B-purple2)
   );
 }
+
+.attribution {
+  padding-bottom: 5rem;
+}
